@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CBC85F58-F705-417F-A85F-6B8EC7ABD17E}</ProjectGuid>
+    <ProjectGuid>{E7C66E75-9428-476D-B8B2-874772F2841D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>LOKI</RootNamespace>
@@ -23,8 +23,8 @@
     <UpdatePeriodically>false</UpdatePeriodically>
     <UpdateRequired>false</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>10</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.2.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -78,13 +78,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Inventory.cs" />
-    <Compile Include="Item.cs" />
-    <Compile Include="MainForm.cs">
+    <Compile Include="Forms\Admin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="Forms\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Incompletes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Incompletes.Designer.cs">
+      <DependentUpon>Incompletes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReviewSNIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReviewSNIP.Designer.cs">
+      <DependentUpon>ReviewSNIP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GlobalVariables.cs" />
+    <Compile Include="Inventory.cs" />
+    <Compile Include="Item.cs" />
+    <Compile Include="Forms\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
     </Compile>
     <Compile Include="PAMS.cs" />
     <Compile Include="PAMSEntry.cs" />
@@ -97,14 +116,32 @@
     </Compile>
     <Compile Include="R14.cs" />
     <Compile Include="R14Entry.cs" />
+    <Compile Include="Forms\AddSNIP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddSNIP.Designer.cs">
+      <DependentUpon>AddSNIP.cs</DependentUpon>
+    </Compile>
     <Compile Include="UnrefinedPAMSEntry.cs" />
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Incompletes.resx">
+      <DependentUpon>Incompletes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReviewSNIP.resx">
+      <DependentUpon>ReviewSNIP.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddSNIP.resx">
+      <DependentUpon>AddSNIP.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="LOKI_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
